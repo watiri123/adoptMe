@@ -8,6 +8,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -33,6 +34,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -76,8 +78,10 @@ class HomeActivity : ComponentActivity() {
                         Icon(Icons.Filled.List, "backIcon")
                     }
                 },
+                colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = Color.DarkGray)
             )
         }, content = {
+           
             Column(
                 modifier = Modifier
                     .fillMaxSize()
@@ -90,7 +94,7 @@ class HomeActivity : ComponentActivity() {
 
                     item {
                         Column (horizontalAlignment = Alignment.CenterHorizontally){
-                            Text(text = "CATS", color = Color(0xff95ffe7))
+                            Text(text = "CATS", color = Color(0xFF40C4FF))
 
                             LazyRow {
 
@@ -107,7 +111,7 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "Maine Coon")
+                                        Text(text = "Maine Coon", color = Color.White)
 
                                     }
 
@@ -125,7 +129,7 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "American Curl")
+                                        Text(text = "American Curl", color = Color.White)
 
                                     }
                                 }
@@ -140,7 +144,7 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "Tuxedo")
+                                        Text(text = "Tuxedo", color = Color.White)
 
                                     }
                                 }
@@ -155,7 +159,7 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "Siamese Cat")
+                                        Text(text = "Siamese Cat", color = Color.White)
 
 
                                     }
@@ -173,7 +177,7 @@ class HomeActivity : ComponentActivity() {
 
                     item{
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "DOGS",color = Color(0xff95E2FF))
+                            Text(text = "DOGS",color = Color(0XFF9575CD))
 
                             LazyRow {
 
@@ -187,8 +191,8 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "Jack Russell")
-                                        
+                                        Text(text = "Jack Russell", color = Color.White)
+
                                     }
                                 }
 
@@ -202,7 +206,7 @@ class HomeActivity : ComponentActivity() {
                                                 .size(100.dp)
                                                 .padding(5.dp)
                                         )
-                                        Text(text = "Maltipoo")
+                                        Text(text = "Maltipoo", color = Color.White)
                                     }
 
                                 }
@@ -218,7 +222,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Maltipoo")
+                                        Text(text = "Maltipoo", color = Color.White)
 
                                     }
 
@@ -236,7 +240,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "BULL DOG")
+                                        Text(text = "BULL DOG", color = Color.White)
                                     }
 
                                 }
@@ -252,7 +256,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Dog 4")
+                                        Text(text = "Dog 4", color = Color.White)
                                     }
 
                                 }
@@ -269,7 +273,7 @@ class HomeActivity : ComponentActivity() {
 
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
 
-                            Text(text = "GOLD FISH",color = Color(0xff95ffe7))
+                            Text(text = "GOLD FISH",color = Color(0xFF40C4FF))
 
 
                             LazyRow {
@@ -284,7 +288,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Gold 1")
+                                        Text(text = "Gold 1", color = Color.White)
                                     }
 
                                 }
@@ -300,7 +304,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Gold 2")
+                                        Text(text = "Gold 2", color = Color.White)
                                     }
 
                                 }
@@ -316,7 +320,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Gold 3")
+                                        Text(text = "Gold 3", color = Color.White)
                                     }
 
                                 }
@@ -326,13 +330,14 @@ class HomeActivity : ComponentActivity() {
                                         Image(
                                             painter = painterResource(id = R.drawable.gold4) ,
                                             contentDescription = "A cat",
+
                                             contentScale= ContentScale.Crop,
                                             modifier = Modifier
                                                 .size(100.dp)
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Gold 4")
+                                        Text(text = "Gold 4", color = Color.White)
                                     }
 
                                 }
@@ -347,7 +352,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "Gold 5")
+                                        Text(text = "Gold 5", color = Color.White)
                                     }
 
                                 }
@@ -363,7 +368,7 @@ class HomeActivity : ComponentActivity() {
 
                     item {
                         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "HAMSTERS",color = Color(0xff95E2FF))
+                            Text(text = "HAMSTERS",color = Color(0XFF9575CD))
 
                             LazyRow {
 
@@ -378,7 +383,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "ham 1")
+                                        Text(text = "ham 1", color = Color.White)
                                     }
 
                                 }
@@ -394,7 +399,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "ham 2")
+                                        Text(text = "ham 2", color = Color.White)
                                     }
 
                                 }
@@ -410,7 +415,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "ham 3")
+                                        Text(text = "ham 3", color = Color.White)
                                     }
 
                                 }
@@ -425,7 +430,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "ham 4")
+                                        Text(text = "ham 4", color = Color.White)
                                     }
 
                                 }
@@ -440,7 +445,7 @@ class HomeActivity : ComponentActivity() {
                                                 .padding(5.dp)
 
                                         )
-                                        Text(text = "ham 5")
+                                        Text(text = "ham 5", color = Color.White)
                                     }
 
 
