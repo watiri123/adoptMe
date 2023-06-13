@@ -86,378 +86,42 @@ class HomeActivity : ComponentActivity() {
                 modifier = Modifier
                     .fillMaxSize()
                     .background(color = Color.DarkGray),
-                verticalArrangement = Arrangement.Center,
+
+                verticalArrangement = Arrangement.Top,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
 
                 LazyColumn {
 
                     item {
-                        Column (horizontalAlignment = Alignment.CenterHorizontally){
-                            Text(text = "CATS", color = Color(0xFF40C4FF))
 
-                            LazyRow {
+                        Row1(
+                            modifier = Modifier
+                                .size(30.dp),
+                            verticalAlignment = Alignment.Top,
+                            horizontalArrangement = Arrangement.End,
 
-                                item {
-
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.cat1) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "Maine Coon", color = Color.White)
-
-                                    }
-
-                                }
-
-                                item{
-                                    Column(
-                                        horizontalAlignment = Alignment.CenterHorizontally
-                                    ) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.cat2) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "American Curl", color = Color.White)
-
-                                    }
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.cat4) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "Tuxedo", color = Color.White)
-
-                                    }
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.cat5) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "Siamese Cat", color = Color.White)
-
-
-                                    }
-                                }
-
-
-                            }
-
-                            Spacer(modifier = Modifier.height(20.dp))
-
-                        }
-
-
-                    }
-
-                    item{
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "DOGS",color = Color(0XFF9575CD))
-
-                            LazyRow {
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.dog1) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "Jack Russell", color = Color.White)
-
-                                    }
-                                }
-
-                                item{
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.dog2) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-                                        )
-                                        Text(text = "Maltipoo", color = Color.White)
-                                    }
-
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.dog3),
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Maltipoo", color = Color.White)
-
-                                    }
-
-                                }
-
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.dog4) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "BULL DOG", color = Color.White)
-                                    }
-
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.dog5) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Dog 4", color = Color.White)
-                                    }
-
-                                }
-
-
-                            }
-                            Spacer(modifier = Modifier.height(20.dp))
-
-                        }
-
-                    }
-
-                    item {
-
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-
-                            Text(text = "GOLD FISH",color = Color(0xFF40C4FF))
-
-
-                            LazyRow {
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.gold1) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Gold 1", color = Color.White)
-                                    }
-
-                                }
-
-                                item{
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.gold2) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Gold 2", color = Color.White)
-                                    }
-
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.gold3) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Gold 3", color = Color.White)
-                                    }
-
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.gold4) ,
-                                            contentDescription = "A cat",
-
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Gold 4", color = Color.White)
-                                    }
-
-                                }
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.gold5) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "Gold 5", color = Color.White)
-                                    }
-
-                                }
-
-
-                            }
-                            Spacer(modifier = Modifier.height(20.dp))
-
-
+                            ){
+                            Image(painter = painterResource(id = R.drawable.loc), contentDescription = null)
 
                         }
                     }
 
                     item {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                            Text(text = "HAMSTERS",color = Color(0XFF9575CD))
 
-                            LazyRow {
+                        Row1(
+                            modifier = Modifier
+                                .size(30.dp),
+                            verticalAlignment = Alignment.Top,
+                            horizontalArrangement = Arrangement.End,
 
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.ham1) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "ham 1", color = Color.White)
-                                    }
-
-                                }
-
-                                item{
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.ham2) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "ham 2", color = Color.White)
-                                    }
-
-                                }
-
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.ham3) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "ham 3", color = Color.White)
-                                    }
-
-                                }
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.ham4) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "ham 4", color = Color.White)
-                                    }
-
-                                }
-                                item {
-                                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                                        Image(
-                                            painter = painterResource(id = R.drawable.ham5) ,
-                                            contentDescription = "A cat",
-                                            contentScale= ContentScale.Crop,
-                                            modifier = Modifier
-                                                .size(100.dp)
-                                                .padding(5.dp)
-
-                                        )
-                                        Text(text = "ham 5", color = Color.White)
-                                    }
-
-
-                                }
-
-
-                            }
-
-                            Spacer(modifier = Modifier.height(20.dp))
+                            ){
+                            Image(painter = painterResource(id = R.drawable.loc), contentDescription = null)
 
                         }
                     }
+
+                    
 
 
 
